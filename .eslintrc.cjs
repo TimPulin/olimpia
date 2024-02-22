@@ -20,6 +20,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:vue/vue3-essential',
     'airbnb',
+    "airbnb-base",
     'prettier',
   ],
 

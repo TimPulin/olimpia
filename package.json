@@ -30,5 +30,16 @@
     "alias": {
       "@/*": "src/*"
     }
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base"
+    ],
+    "plugins": [
+      "import"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
   }
 }

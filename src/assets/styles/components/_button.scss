@@ -1,0 +1,11 @@
+.button-base {
+  @include btn-reset;
+
+  padding: 10px 20px;
+
+  border-radius: $border-radius-basic;
+  box-shadow: 0 0 3px 3px $color-grey_max_light;
+
+  text-align: center;
+  vertical-align: middle;
+}

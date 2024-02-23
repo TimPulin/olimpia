@@ -1,0 +1,13 @@
+.container {
+  --padding: 20;
+  margin: 0 auto;
+  padding-inline: calc(var(--padding) * 1px);
+  max-width: calc($XLarge-screen - calc(var(--padding) * 2px));
+  min-height: 100vh;
+}
+
+@media (min-width: $XLarge-screen) {
+  .container {
+    padding-inline: 0;
+  }
+}

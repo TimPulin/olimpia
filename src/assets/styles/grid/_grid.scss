@@ -1,0 +1,15 @@
+.grid-base {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  grid-template-rows: minmax(1px, auto);
+  grid-auto-rows: 1fr;
+}
+
+.header {
+  grid-column: 1 / span 12;
+}
+.page {
+  grid-column: 1 / span 12;
+}

@@ -7,8 +7,8 @@
         :key="index"
       >
         <RadioBase
-          :local-value="item.value"
-          input-name="1"
+          :local-value="item"
+          input-name="options-answer"
           :model-value="answer"
           @update:model-value="onChange"
         />
@@ -44,10 +44,10 @@ export default {
       this.answer = value;
     },
     sendAnswer() {
+      this.answer = null;
       this.$emit('answer', this.answer);
     },
   },
-  watch() {},
 };
 </script>
 

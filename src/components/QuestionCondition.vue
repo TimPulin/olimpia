@@ -7,7 +7,7 @@
           alt="close"
         />
       </ButtonBase>
-      <div>Choose the right answer</div>
+      <div>{{ questionState.condition }}</div>
       <ButtonBase aria-label="close">
         <img
           src="@img/bulb.png"
@@ -15,19 +15,28 @@
         />
       </ButtonBase>
     </div>
-    <div class="question-text row">Which shape shows third</div>
+    <div class="question-text row">{{ questionState.text }}</div>
     <div class="question-img row">
       <img
         class="img"
-        src="@img/task/task_img.png"
+        :src="questionState.img"
         alt="task image"
       />
     </div>
   </div>
 </template>
 
-<script setup>
+<script>
 import ButtonBase from './base/ButtonBase.vue';
+
+export default {
+  components: { ButtonBase },
+  props: {
+    questionState: {
+      require: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

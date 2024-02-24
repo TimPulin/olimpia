@@ -3,9 +3,19 @@
 
   padding: 10px 20px;
 
+  background-color: #fff;
   border-radius: $border-radius-basic;
   box-shadow: 0 0 3px 3px $color-grey_max_light;
 
   text-align: center;
   vertical-align: middle;
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-primary;
+  }
+  &:active {
+    background-color: $color-primary_shade;
+  }
 }

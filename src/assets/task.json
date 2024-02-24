@@ -3,8 +3,8 @@
   "condition": "Choose the right answer",
   "img": "src/assets/img/task/task_img.png",
   "answer": {
-    "correct_answer": "c",
-    "options_answer": ["a", "b", "c"],
+    "correct_answer": "C",
+    "options_answer": ["A", "B", "C"],
     "user_answer": null
   }
 }

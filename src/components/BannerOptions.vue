@@ -25,7 +25,7 @@
 <script>
 import RadioBase from '@/components/base/RadioBase.vue';
 import ButtonBase from '@/components/base/ButtonBase.vue';
-import { useDialogStore } from '../store/dialog';
+import { useDialogStore } from '@store/dialog.js';
 
 export default {
   emit: ['answer'],

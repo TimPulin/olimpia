@@ -3,7 +3,7 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
   row-gap: 30px;
-  grid-template-rows: minmax(1px, auto) 1fr minmax(1px, auto);
+  grid-template-rows: auto 1fr auto;
 }
 
 .header {

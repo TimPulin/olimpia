@@ -25,12 +25,14 @@
 <script>
 import RadioBase from '@/components/base/RadioBase.vue';
 import ButtonBase from '@/components/base/ButtonBase.vue';
+import { useDialogStore } from '../store/dialog';
 
 export default {
   emit: ['answer'],
   data() {
     return {
       answer: null,
+      dialog: useDialogStore(),
     };
   },
   components: { RadioBase, ButtonBase },
@@ -44,8 +46,15 @@ export default {
       this.answer = value;
     },
     sendAnswer() {
+      if (this.answer !== null) {
+        this.$emit('answer', this.answer);
+      } else {
+        this.dialog.$patch((state) => {
+          state.isOpen = true;
+          state.text = 'Выбери ответ';
+        });
+      }
       this.answer = null;
-      this.$emit('answer', this.answer);
     },
   },
 };
@@ -53,12 +62,12 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
+  left: 50%;
   display: flex;
   column-gap: 20px;
-  width: 100%;
+  width: 100vw;
+  margin-left: -50vw;
   padding: 20px;
 }
 .list {

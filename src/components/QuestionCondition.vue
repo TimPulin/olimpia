@@ -1,17 +1,15 @@
 <template>
   <div class="question-condition grid-base">
     <div class="first-line row">
-      <ButtonBase aria-label="close">
-        <img
-          src="@img/close_btn.png"
-          alt="close"
-        />
-      </ButtonBase>
+      <ButtonClose />
       <div>{{ questionState.condition }}</div>
-      <ButtonBase aria-label="close">
+      <ButtonBase
+        aria-label="open help"
+        @click="openHelp"
+      >
         <img
           src="@img/bulb.png"
-          alt="close"
+          alt="open help"
         />
       </ButtonBase>
     </div>
@@ -28,12 +26,27 @@
 
 <script>
 import ButtonBase from './base/ButtonBase.vue';
+import ButtonClose from './button/ButtonClose.vue';
+import { useDialogStore } from '../store/dialog';
 
 export default {
-  components: { ButtonBase },
+  components: { ButtonBase, ButtonClose },
   props: {
     questionState: {
       require: true,
+    },
+  },
+  data() {
+    return {
+      dialog: useDialogStore(),
+    };
+  },
+  methods: {
+    openHelp() {
+      this.dialog.$patch((state) => {
+        state.isOpen = true;
+        state.text = 'Текст с помощью';
+      });
     },
   },
 };

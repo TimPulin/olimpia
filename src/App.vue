@@ -1,22 +1,25 @@
 <template>
+  <DialogBase />
   <div class="container">
-    <div
-      class="grid-base"
-      v-if="isLoaded"
-    >
+    <div class="grid-base">
       <SiteHeader />
-      <PageTask :question-state="questionState" />
+      <PageTask
+        v-if="isLoaded"
+        :question-state="questionState"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import DialogBase from './components/DialogBase.vue';
 import PageTask from './pages/PageTask.vue';
 import SiteHeader from './site/SiteHeader.vue';
+
 import { fetchQuestion } from '@/connect/server-connections.js';
 
 export default {
-  components: { PageTask, SiteHeader },
+  components: { PageTask, DialogBase, SiteHeader },
   data() {
     return {
       questionState: null,
@@ -36,9 +39,8 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
+<style scoped>
 .grid-base {
-  min-height: 100vh;
+  min-height: 100%;
 }
 </style>

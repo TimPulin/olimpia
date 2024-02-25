@@ -1,6 +1,9 @@
 .button-base {
   @include btn-reset;
 
+  position: relative;
+  padding: 10px 20px;
+
   box-shadow: 0 0 3px 3px $color-grey_max_light;
   border-radius: $border-radius-basic;
   background-color: #fff;
@@ -8,9 +11,6 @@
   vertical-align: middle;
   color: #fff;
   transition: background-color 0.3s ease;
-
-  position: relative;
-  padding: 10px 20px;
 
   &:hover {
     background-color: $color-primary;

@@ -9,6 +9,21 @@
     "preview": "vite preview",
     "fixcss": "npx stylelint '**/*.scss' --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"[Husky] test msg\""
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.css": [
+        "stylelint --fix"
+      ],
+      "*.scss": [
+        "stylelint --fix"
+      ]
+    }
+  },
   "dependencies": {
     "@vue/eslint-config-airbnb": "^8.0.0",
     "axios": "^1.6.7",
@@ -36,21 +51,6 @@
     "stylelint-order": "^6.0.4",
     "vite": "^5.1.4",
     "vite-plugin-eslint": "^1.8.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "linters": {
-      "*.css": [
-        "stylelint --fix"
-      ],
-      "*.scss": [
-        "stylelint --fix"
-      ]
-    }
   },
   "resolve-path-alias": {
     "alias": {

@@ -1,7 +1,7 @@
 {
   "text": "Which shape shows thirds?",
   "condition": "Choose the right answer",
-  "img": "/public/task/img/task_img.png",
+  "img": "/task/img/task_img.png",
   "answer": {
     "correct_answer": "C",
     "options_answer": ["A", "B", "C"],

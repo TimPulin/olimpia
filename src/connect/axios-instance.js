@@ -1,6 +1,10 @@
 import axios from 'axios';
-
-const API_BASE_URL = '/src/assets/task.json';
+let API_BASE_URL;
+if (process.env.NODE_ENV === 'development') {
+  API_BASE_URL = '/task/task.json';
+} else {
+  API_BASE_URL = '/olimpia/task/task.json';
+}
 
 const serverAPI = axios.create({
   baseURL: API_BASE_URL,

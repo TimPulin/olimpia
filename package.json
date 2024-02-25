@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build NODE_ENV=production",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -31,7 +31,9 @@
   },
   "resolve-path-alias": {
     "alias": {
-      "@/*": "src/*"
+      "@/*": "src/*",
+      "@styles/*": "src/assets/styles/*",
+      "@img/*": "src/assets/img/*"
     }
   },
   "eslintConfig": {

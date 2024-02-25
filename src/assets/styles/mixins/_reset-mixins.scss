@@ -10,22 +10,24 @@
 
 @mixin list-reset {
   @include reset;
+
   list-style: none;
 }
 
 @mixin btn-reset {
   @include reset;
+
+  outline: none;
   border: none;
   background-color: transparent;
-  outline: none;
   cursor: pointer;
 }
 
 @mixin input-reset {
   padding: 0;
-  border: none;
-  background-image: none;
-  background-color: transparent;
   box-shadow: none;
   outline: none;
+  border: none;
+  background-color: transparent;
+  background-image: none;
 }

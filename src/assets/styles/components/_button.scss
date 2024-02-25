@@ -1,20 +1,21 @@
 .button-base {
   @include btn-reset;
 
-  padding: 10px 20px;
-
-  background-color: #fff;
-  border-radius: $border-radius-basic;
   box-shadow: 0 0 3px 3px $color-grey_max_light;
-
+  border-radius: $border-radius-basic;
+  background-color: #fff;
   text-align: center;
   vertical-align: middle;
-
+  color: #fff;
   transition: background-color 0.3s ease;
+
+  position: relative;
+  padding: 10px 20px;
 
   &:hover {
     background-color: $color-primary;
   }
+
   &:active {
     background-color: $color-primary_shade;
   }

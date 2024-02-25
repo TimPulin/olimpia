@@ -14,7 +14,6 @@
         />
       </li>
     </ul>
-
     <ButtonBase
       text="Check"
       @click="sendAnswer"
@@ -29,17 +28,18 @@ import { useDialogStore } from '@store/dialog.js';
 
 export default {
   emit: ['answer'],
+
+  props: {
+    optionsList: {
+      required: true,
+    },
+  },
+  components: { RadioBase, ButtonBase },
   data() {
     return {
       answer: null,
       dialog: useDialogStore(),
     };
-  },
-  components: { RadioBase, ButtonBase },
-  props: {
-    optionsList: {
-      required: true,
-    },
   },
   methods: {
     onChange(value) {

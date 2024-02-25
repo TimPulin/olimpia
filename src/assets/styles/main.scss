@@ -2,10 +2,7 @@
 @import './utils/vars';
 @import './mixins/reset-mixins';
 @import './mixins/components-mixins';
-
 @import './grid/container';
-@import './grid/grid.scss';
-
-@import './common.scss';
-
+@import './grid/grid';
+@import './common';
 @import './components/button';
